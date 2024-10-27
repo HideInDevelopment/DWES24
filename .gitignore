@@ -1,0 +1,6 @@
+# Excluir la carpeta .vs en API_Gatinos
+API_Gatinos/.vs
+
+# Excluir las carpetas bin y obj en API_Gatinos
+API_Gatinos/API_Gatinos/bin
+API_Gatinos/API_Gatinos/obj
