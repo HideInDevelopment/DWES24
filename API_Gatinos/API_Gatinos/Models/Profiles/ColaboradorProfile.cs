@@ -4,11 +4,11 @@ using AutoMapper;
 
 namespace API_Gatinos.Models.Profiles;
 
-public class ResponsableProfile : Profile
+public class ColaboradorProfile : Profile
 {
-    public ResponsableProfile()
+    public ColaboradorProfile()
     {
-        CreateMap<ResponsableDto, Responsable>()
+        CreateMap<ColaboradorDTO, Colaborador>()
             .ReverseMap()
             .ForMember(destino => destino.Id, origen => origen.MapFrom(source => source.Id))
             .ForMember(destino => destino.Nombre, origen => origen.MapFrom(source => source.Nombre))

@@ -12,5 +12,5 @@ public class Colonia : Entity<Guid>
     public string Descripcion { get; set; }
     public string Imagen { get; set; }
     public virtual ICollection<Gato> Gatos { get; set; }
-    public virtual ICollection<Responsable> Responsables { get; set; }
+    public virtual ICollection<Colaborador> Colaboradores { get; set; }
 }

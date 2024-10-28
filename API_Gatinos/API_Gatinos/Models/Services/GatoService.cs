@@ -2,29 +2,29 @@
 
 namespace API_Gatinos.Models.Services;
 
-public class GatoService : IEntityService<Guid, GatoDto>
+public class GatoService : IEntityService<Guid, GatoDTO>
 {
-    public GatoDto Get(Guid id)
+    public GatoDTO Get(Guid id)
     {
         throw new NotImplementedException();
     }
 
-    public ICollection<GatoDto> Get()
+    public ICollection<GatoDTO> Get()
     {
         throw new NotImplementedException();
     }
 
-    public GatoDto Update(GatoDto entity)
+    public GatoDTO Update(GatoDTO entity)
     {
         throw new NotImplementedException();
     }
 
-    public GatoDto Create(GatoDto entity)
+    public GatoDTO Create(GatoDTO entity)
     {
         throw new NotImplementedException();
     }
 
-    public GatoDto Delete(Guid id)
+    public GatoDTO Delete(Guid id)
     {
         throw new NotImplementedException();
     }

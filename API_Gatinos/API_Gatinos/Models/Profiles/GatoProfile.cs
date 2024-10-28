@@ -8,7 +8,7 @@ public class GatoProfile : Profile
 {
     public GatoProfile()
     {
-        CreateMap<GatoDto, Gato>()
+        CreateMap<GatoDTO, Gato>()
             .ReverseMap()
             .ForMember(destino => destino.Id, origen => origen.MapFrom(source => source.Id))
             .ForMember(destino => destino.Nombre, origen => origen.MapFrom(source => source.Nombre))

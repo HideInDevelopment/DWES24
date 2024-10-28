@@ -5,35 +5,38 @@ using Microsoft.AspNetCore.Mvc;
 namespace API_Gatinos.Controllers;
 
 [ApiController]
-//[Route("[controller]")]
-[Route("api")]
+[Route("[controller]")]
 public class ColoniaController : ControllerBase
 {
-    private readonly IEntityService<Guid, ColoniaDto> _coloniaService;
+    private readonly IEntityService<Guid, ColoniaDTO> _coloniaService;
 
-    public ColoniaController(IEntityService<Guid, ColoniaDto> coloniaService)
+    public ColoniaController(IEntityService<Guid, ColoniaDTO> coloniaService)
     {
         _coloniaService = coloniaService;
     }
 
-    [HttpGet("colonias")]
+    [HttpGet()]
     public ActionResult GetColonias() => Ok("Devolviendo las colonias...");
 
-    [HttpGet("colonias/{id}")]
+    [HttpGet("{id}")]
     public ActionResult GetColonia([FromRoute] Guid id) =>
         Ok($"Devolviendo la colonia con id {id}...");
 
-    [HttpPost("colonias")]
-    public ActionResult CreateColonia([FromBody] ColoniaDto colonia) =>
+    [HttpPost()]
+    public ActionResult CreateColonia([FromBody] ColoniaDTO colonia) =>
         Ok(
-            $"La colonia {colonia.Nombre} con un total de {colonia.Responsables.Count} responsables y {colonia.Gatos.Count} gatos ha sido creada con exito..."
+            $"La colonia {colonia.Nombre} con un total de {colonia.Colaboradores.Count} colaborador y {colonia.Gatos.Count} gatos ha sido creada con exito..."
         );
 
-    [HttpPut("colonias")]
-    public ActionResult UpdateColonia([FromBody] ColoniaDto colonia) =>
+    [HttpPut()]
+    public ActionResult UpdateColonia([FromBody] ColoniaDTO colonia) =>
         Ok($"La colonia {colonia.Nombre} ha sido actualizada con exito...");
 
-    [HttpDelete("colonias/{id}")]
+    [HttpPatch("{id}")]
+    public ActionResult SetLocation([FromRoute] Guid id, [FromBody] string ubication) =>
+        Ok($"Actualizando la ubicacion de la colonia {id} a {ubication}...");
+
+    [HttpDelete("{id}")]
     public ActionResult DeleteColonia([FromRoute] Guid id) =>
         Ok($"La colonia con id {id} ha sido borrada con exito...");
 }

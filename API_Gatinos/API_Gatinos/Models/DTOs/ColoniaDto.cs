@@ -3,7 +3,7 @@
 namespace API_Gatinos.Models.DTOs;
 
 #nullable disable
-public class ColoniaDto
+public class ColoniaDTO
 {
     public Guid Id { get; set; }
     public string Nombre { get; set; }
@@ -12,6 +12,6 @@ public class ColoniaDto
     public int Movil { get; set; }
     public string Descripcion { get; set; }
     public string Imagen { get; set; }
-    public ICollection<GatoDto> Gatos { get; set; }
-    public ICollection<ResponsableDto> Responsables { get; set; }
+    public ICollection<GatoDTO> Gatos { get; set; }
+    public ICollection<ColaboradorDTO> Colaboradores { get; set; }
 }

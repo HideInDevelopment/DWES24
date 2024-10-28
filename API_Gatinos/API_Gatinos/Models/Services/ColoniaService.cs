@@ -2,29 +2,29 @@
 
 namespace API_Gatinos.Models.Services;
 
-public class ColoniaService : IEntityService<Guid, ColoniaDto>
+public class ColoniaService : IEntityService<Guid, ColoniaDTO>
 {
-    public ICollection<ColoniaDto> Get()
+    public ICollection<ColoniaDTO> Get()
     {
         throw new NotImplementedException();
     }
 
-    public ColoniaDto Get(Guid id)
+    public ColoniaDTO Get(Guid id)
     {
         throw new NotImplementedException();
     }
 
-    public ColoniaDto Create(ColoniaDto entity)
+    public ColoniaDTO Create(ColoniaDTO entity)
     {
         throw new NotImplementedException();
     }
 
-    public ColoniaDto Update(ColoniaDto entity)
+    public ColoniaDTO Update(ColoniaDTO entity)
     {
         throw new NotImplementedException();
     }
 
-    public ColoniaDto Delete(Guid id)
+    public ColoniaDTO Delete(Guid id)
     {
         throw new NotImplementedException();
     }

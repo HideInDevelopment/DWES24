@@ -1,4 +1,5 @@
-﻿using API_Gatinos.Models.Repositories.GenericDBConnection.Models;
+﻿using API_Gatinos.Models.Enums;
+using API_Gatinos.Models.Repositories.GenericDBConnection.Models;
 
 namespace API_Gatinos.Models.Entities;
 
@@ -9,5 +10,6 @@ public class Gato : Entity<Guid>
     public int Edad { get; set; }
     public string Raza { get; set; }
     public int Peso { get; set; }
+    public EstadoSalud EstadoSalud { get; set; }
     public Guid IdColonia { get; set; }
 }

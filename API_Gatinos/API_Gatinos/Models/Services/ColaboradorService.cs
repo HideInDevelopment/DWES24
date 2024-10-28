@@ -2,29 +2,29 @@
 
 namespace API_Gatinos.Models.Services;
 
-public class ResponsableService : IEntityService<Guid, ResponsableDto>
+public class ColaboradorService : IEntityService<Guid, ColaboradorDTO>
 {
-    public ResponsableDto Get(Guid id)
+    public ColaboradorDTO Get(Guid id)
     {
         throw new NotImplementedException();
     }
 
-    public ICollection<ResponsableDto> Get()
+    public ICollection<ColaboradorDTO> Get()
     {
         throw new NotImplementedException();
     }
 
-    public ResponsableDto Create(ResponsableDto entity)
+    public ColaboradorDTO Create(ColaboradorDTO entity)
     {
         throw new NotImplementedException();
     }
 
-    public ResponsableDto Update(ResponsableDto entity)
+    public ColaboradorDTO Update(ColaboradorDTO entity)
     {
         throw new NotImplementedException();
     }
 
-    public ResponsableDto Delete(Guid id)
+    public ColaboradorDTO Delete(Guid id)
     {
         throw new NotImplementedException();
     }

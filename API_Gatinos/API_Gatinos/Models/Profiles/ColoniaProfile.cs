@@ -8,7 +8,7 @@ public class ColoniaProfile : Profile
 {
     public ColoniaProfile()
     {
-        CreateMap<ColoniaDto, Colonia>()
+        CreateMap<ColoniaDTO, Colonia>()
             .ReverseMap()
             .ForMember(destino => destino.Id, origen => origen.MapFrom(source => source.Id))
             .ForMember(destino => destino.Nombre, origen => origen.MapFrom(source => source.Nombre))
@@ -28,8 +28,8 @@ public class ColoniaProfile : Profile
             .ForMember(destino => destino.Imagen, origen => origen.MapFrom(source => source.Imagen))
             .ForMember(destino => destino.Gatos, origen => origen.MapFrom(source => source.Gatos))
             .ForMember(
-                destino => destino.Responsables,
-                origen => origen.MapFrom(source => source.Responsables)
+                destino => destino.Colaboradores,
+                origen => origen.MapFrom(source => source.Colaboradores)
             );
     }
 }

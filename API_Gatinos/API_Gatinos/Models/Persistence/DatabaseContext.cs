@@ -7,5 +7,5 @@ public class DatabaseContext : DbContext
 {
     public DbSet<Colonia>? Colonias { get; set; }
     public DbSet<Gato>? Gatos { get; set; }
-    public DbSet<Responsable>? Responsables { get; set; }
+    public DbSet<Colaborador>? Colaboradores { get; set; }
 }

@@ -3,7 +3,7 @@
 namespace API_Gatinos.Models.Entities;
 
 #nullable disable
-public class Responsable : Entity<Guid>
+public class Colaborador : Entity<Guid>
 {
     public string Nombre { get; set; }
     public int Edad { get; set; }
