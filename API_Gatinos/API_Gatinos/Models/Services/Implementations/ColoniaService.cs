@@ -1,9 +1,10 @@
 ﻿using API_Gatinos.Models.DTOs;
 using API_Gatinos.Models.Entities;
 using API_Gatinos.Models.Repositories.Interfaces;
+using API_Gatinos.Models.Services.Interfaces;
 using AutoMapper;
 
-namespace API_Gatinos.Models.Services;
+namespace API_Gatinos.Models.Services.Implementations;
 
 public class ColoniaService : IEntityService<Guid, ColoniaDTO>
 {

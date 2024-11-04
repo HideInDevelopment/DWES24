@@ -1,5 +1,5 @@
 ﻿using API_Gatinos.Models.DTOs;
-using API_Gatinos.Models.Repositories.Interfaces;
+using API_Gatinos.Models.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API_Gatinos.Controllers;

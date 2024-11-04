@@ -1,9 +1,11 @@
 using System.Text.Json;
 using API_Gatinos.Models.DTOs;
+using API_Gatinos.Models.Entities;
 using API_Gatinos.Models.Repositories.GenericDBConnection;
 using API_Gatinos.Models.Repositories.Implementations;
 using API_Gatinos.Models.Repositories.Interfaces;
-using API_Gatinos.Models.Services;
+using API_Gatinos.Models.Services.Implementations;
+using API_Gatinos.Models.Services.Interfaces;
 using AutoMapper;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.OpenApi.Models;
@@ -104,9 +106,9 @@ services.AddResponseCompression(options =>
 services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 services.AddScoped<IMapper, Mapper>();
 services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
-services.AddScoped<IColaboradorRepository, ColaboradorRepository>();
-services.AddScoped<IGatoRepository, GatoRepository>();
-services.AddScoped<IColoniaRepository, ColoniaRepository>();
+services.AddScoped<IEntityRepository<Guid, Colaborador>, ColaboradorRepository>();
+services.AddScoped<IEntityRepository<Guid, Gato>, GatoRepository>();
+services.AddScoped<IEntityRepository<Guid, Colonia>, ColoniaRepository>();
 services.AddScoped<IEntityService<Guid, ColoniaDTO>, ColoniaService>();
 services.AddScoped<IEntityService<Guid, GatoDTO>, GatoService>();
 services.AddScoped<IEntityService<Guid, ColaboradorDTO>, ColaboradorService>();
