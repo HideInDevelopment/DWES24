@@ -1,4 +1,5 @@
 ﻿using API_Gatinos.Models.DTOs;
+using API_Gatinos.Models.Repositories.Interfaces;
 
 namespace API_Gatinos.Models.Services;
 

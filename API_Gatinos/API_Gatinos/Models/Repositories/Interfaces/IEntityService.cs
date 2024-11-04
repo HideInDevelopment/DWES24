@@ -1,6 +1,4 @@
-﻿using API_Gatinos.Models.DTOs;
-
-namespace API_Gatinos.Models.Services;
+﻿namespace API_Gatinos.Models.Repositories.Interfaces;
 
 public interface IEntityService<TKey, TEntity>
 {
