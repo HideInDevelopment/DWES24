@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API_Gatinos", "API_Gatinos\API_Gatinos.csproj", "{AFF9BB93-60F4-46C1-B8D8-21EDD2E2AAB8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActividadUT2", "ActividadUT2\ActividadUT2.csproj", "{C9052BD2-BE2E-482F-A71E-DC58AB5E5BE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AFF9BB93-60F4-46C1-B8D8-21EDD2E2AAB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFF9BB93-60F4-46C1-B8D8-21EDD2E2AAB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFF9BB93-60F4-46C1-B8D8-21EDD2E2AAB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9052BD2-BE2E-482F-A71E-DC58AB5E5BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9052BD2-BE2E-482F-A71E-DC58AB5E5BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9052BD2-BE2E-482F-A71E-DC58AB5E5BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9052BD2-BE2E-482F-A71E-DC58AB5E5BE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

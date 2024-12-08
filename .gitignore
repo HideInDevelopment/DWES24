@@ -4,3 +4,7 @@ API_Gatinos/.vs
 # Excluir las carpetas bin y obj en API_Gatinos
 API_Gatinos/API_Gatinos/bin
 API_Gatinos/API_Gatinos/obj
+
+# Excluir las carpetas bin y obj en Actividad2
+API_Gatinos/Actividad2/bin
+API_Gatinos/Actividad2/obj
