@@ -1,5 +1,6 @@
 ﻿using ActividadUT2.Domain.Entity;
 using ActividadUT2.Domain.Enum;
+using ActividadUT2.Domain.Generic;
 using ActividadUT2.Domain.Repository;
 using FluentAssertions;
 using Moq;
@@ -10,11 +11,11 @@ namespace ActividadUT2.Test.RepositoryTest;
 [TestFixture]
 public class CatRepositoryTest
 {
-    private readonly Mock<CatRepository> _mockedCatRepository;
+    private readonly Mock<IEntityRepository<Guid, Cat>> _mockedCatRepository;
 
-    public CatRepositoryTest(Mock<CatRepository> mockedCatRepository)
+    public CatRepositoryTest()
     {
-        _mockedCatRepository = mockedCatRepository;
+        _mockedCatRepository = new Mock<IEntityRepository<Guid, Cat>>();
     }
     
     public void SetUp()
@@ -32,11 +33,11 @@ public class CatRepositoryTest
         //Arrange
         var cats = new List<Cat>
         {
-            new Cat("Tako", 1, "Comun europeo", 5, HealthState.HEALTHY, new Guid()),
-            new Cat("Yaki", 1, "Bombay", 5, HealthState.SICK, new Guid()),
-            new Cat("Happy", 12, "Persa", 5, HealthState.HEALTHY, new Guid()),
-            new Cat("Garfield", 5, "Maine Coon", 5, HealthState.SICK, new Guid()),
-            new Cat("Meatball", 9, "Ragdoll", 5, HealthState.CRITIC, new Guid()),
+            new("Tako", 1, "Comun europeo", 5, HealthState.HEALTHY, new Guid()),
+            new("Yaki", 1, "Bombay", 5, HealthState.SICK, new Guid()),
+            new("Happy", 12, "Persa", 5, HealthState.HEALTHY, new Guid()),
+            new("Garfield", 5, "Maine Coon", 5, HealthState.SICK, new Guid()),
+            new("Meatball", 9, "Ragdoll", 5, HealthState.CRITIC, new Guid()),
         };
         
         var queryableCats = cats.AsQueryable();
@@ -47,7 +48,7 @@ public class CatRepositoryTest
 
         //Assert
         expectedCats.Should().BeEquivalentTo(queryableCats);
-        expectedCats.Should().BeOfType<IQueryable<Cat>>();
+        expectedCats.Should().BeOfType<EnumerableQuery<Cat>>();
         expectedCats.Should().HaveCount(5);
     }
 }
