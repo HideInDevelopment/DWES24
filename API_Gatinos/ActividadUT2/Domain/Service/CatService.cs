@@ -16,16 +16,16 @@ public class CatService : IEntityService<Guid, CatDTO>
         _mapper = mapper;
     }
 
-    public ICollection<CatDTO> Get() =>
+    public ICollection<CatDTO>? Get() =>
         _mapper.Map<ICollection<CatDTO>>(_catRepository.Get().ToList());
 
-    public CatDTO Get(Guid id) => _mapper.Map<CatDTO>(_catRepository.Get(id));
+    public CatDTO? Get(Guid id) => _mapper.Map<CatDTO>(_catRepository.Get(id));
 
-    public CatDTO Create(CatDTO entity) =>
+    public CatDTO? Create(CatDTO entity) =>
         _mapper.Map<CatDTO>(_catRepository.Create(_mapper.Map<Cat>(entity)));
 
-    public CatDTO Update(CatDTO entity) =>
+    public CatDTO? Update(CatDTO entity) =>
         _mapper.Map<CatDTO>(_catRepository.Update(_mapper.Map<Cat>(entity)));
 
-    public CatDTO Delete(Guid id) => _mapper.Map<CatDTO>(_catRepository.Delete(id));
+    public CatDTO? Delete(Guid id) => _mapper.Map<CatDTO>(_catRepository.Delete(id));
 }

@@ -16,9 +16,9 @@ public class CatRepository : IEntityRepository<Guid, Cat>
 
     public Cat? Get(Guid id) => _repository.GetById(id);
 
-    public Cat Create(Cat entity) => _repository.Add(entity);
+    public Cat? Create(Cat entity) => _repository.Add(entity);
 
-    public Cat Update(Cat entity) => _repository.Update(entity);
+    public Cat? Update(Cat entity) => _repository.Update(entity);
 
     public Cat? Delete(Guid id) => _repository.Delete(id);
 }

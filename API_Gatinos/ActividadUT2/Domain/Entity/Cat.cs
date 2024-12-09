@@ -7,17 +7,6 @@ namespace ActividadUT2.Domain.Entity;
 
 public class Cat : Entity<Guid>
 {
-    public Cat(){}
-    public Cat(string name, int age, string race, int weight, HealthState healthState, Guid colonyId)
-    {
-        Name = name;
-        Age = age;
-        Race = race;
-        Weight = weight;
-        HealthState = healthState;
-        ColonyId = colonyId;
-    }
-
     public string Name { get; set; }
     public int Age { get; set; }
     public string Race  { get; set; }
